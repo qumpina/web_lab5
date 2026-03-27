@@ -62,6 +62,7 @@ h2 {
 
 .form-group {
     display: flex;
+    align-items: center;
     flex-direction: column;
 }
 
