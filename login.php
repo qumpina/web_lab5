@@ -63,23 +63,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Вход - Лабораторная работа 5</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .login-container {
-            max-width: 400px;
-            margin: 50px auto;
+        .form-background {
+            width: 600px;
             background: white;
-            padding: 30px;
             border-radius: 15px;
+            padding: 30px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
         .login-container h2 {
             color: #333;
             margin-top: 0;
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
         }
         .back-link {
+            height: 40px;
+            font-size: 24px;
             display: block;
             text-align: center;
             margin-top: 20px;
-            color: #667eea;
+            color: black;
+            background: white;
+            border-radius: 15px;
         }
     </style>
 </head>
@@ -91,7 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="error-message" style="margin-bottom: 20px;"><?php echo $error; ?></div>
         <?php endif; ?>
         
-        <form method="POST" action="login.php">
+        <form method="POST" action="login.php" class="form-background">
             <div class="form-group">
                 <label for="login">Логин:</label>
                 <input type="text" id="login" name="login" required>
